@@ -9,5 +9,18 @@ export default defineNuxtConfig({
     public: {
       apiBase: '/api'
     }
-  }
+  },
+  modules: ['@element-plus/nuxt','@nuxt/fonts', '@nuxtjs/tailwindcss','@nuxt/icon',],
+  css: ['~/assets/scss/main.scss'],
+  tailwindcss: {
+    config: {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1d4ed8',
+          },
+        },
+      },
+    },
+  },
 })

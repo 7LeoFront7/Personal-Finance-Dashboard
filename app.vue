@@ -1,11 +1,14 @@
 <template>
   <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>
 
 <script setup lang="ts">
-const runTimeConfig = useRuntimeConfig()
-console.log(runTimeConfig)
 </script>
+
+<style lang="scss">
+@use "~/assets/scss/main.scss";
+</style>
