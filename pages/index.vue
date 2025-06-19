@@ -1,5 +1,6 @@
 <script setup lang="ts">
 
+import CardForBalance from '~/components/ui/cardForBalance.vue'
 </script>
 
 <template>

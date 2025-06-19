@@ -13,14 +13,13 @@
         :key="el.route"
         :index="el.route"
         class="side-element"
+        @click="router.push(el.route)"
     >
       <el-icon>
         <Icon :name="el.icon" />
       </el-icon>
       <template #title>
-        <NuxtLink :to="el.route" class="w-full block">
-          {{ el.label }}
-        </NuxtLink>
+        {{ el.label }}
       </template>
     </el-menu-item>
   </el-menu>
@@ -28,7 +27,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 const isCollapse = ref(true)
 
 interface sideBar {
@@ -42,6 +41,7 @@ interface itemSideBar {
 }
 
 const route = useRoute()
+const router = useRouter()
 
 const sideBar = ref({
   user: [

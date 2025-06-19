@@ -10,7 +10,10 @@ export default defineNuxtConfig({
       apiBase: '/api'
     }
   },
-  modules: ['@element-plus/nuxt','@nuxt/fonts', '@nuxtjs/tailwindcss','@nuxt/icon',],
+  imports: {
+    autoImport: true, // ← должно быть по умолчанию
+  },
+  modules: ['@element-plus/nuxt','@nuxt/fonts', '@nuxtjs/tailwindcss','@nuxt/icon', '@pinia/nuxt',],
   css: ['~/assets/scss/main.scss'],
   tailwindcss: {
     config: {

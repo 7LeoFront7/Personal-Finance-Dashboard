@@ -10,6 +10,9 @@
 </template>
 
 <script setup lang="ts">
+import AppAsideBar from '~/layouts/AppAsideBar.vue'
+import AppHeader from '~/layouts/AppHeader.vue'
+import AppFooter from '~/layouts/AppFooter.vue'
 </script>/
 
 <style scoped>
